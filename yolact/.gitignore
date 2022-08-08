@@ -120,7 +120,6 @@ test_data_aug.py
 .idea/
 
 # temp checkout soln
-data/coco
 data/sbd
 data/cityscapes
 
