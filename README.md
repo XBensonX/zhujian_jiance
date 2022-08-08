@@ -17,9 +17,7 @@
 - coco --由labelme2coco轉好的Dataset存入(比較資料&訓練資料)
 
 
-# test_data
-- <a href="https://drive.google.com/drive/folders/107iCjjIPpSYx6bPH5vZTlXO3et1qNNrS?usp=sharing" title="test_data">
-download test_data</a>
+# <a href="https://drive.google.com/drive/folders/107iCjjIPpSYx6bPH5vZTlXO3et1qNNrS?usp=sharing" title="test_data"> test_data</a>
 - video_0 videocut.py擷取圖片
 - coco放入 .yolact/data/
 - evalinput放入 .yolact/
