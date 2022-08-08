@@ -1,0 +1,1 @@
+python eval.py --trained_model=weights/yolact_base_98_6000.pth --score_threshold=0.15 --top_k=15 --images=./evalinput/:./evaloutput/

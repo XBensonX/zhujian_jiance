@@ -1,0 +1,3 @@
+python train.py --config=yolact_base_config
+
+set CUDA_VISIBLE_DEVICES=0 & python train.py --config=yolact_base_config
