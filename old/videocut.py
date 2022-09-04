@@ -1,8 +1,8 @@
 import cv2
 
+OUT_PATH = ".\\yolact\\labelout\\"
 
-output_folder = 'C:/Users/jojo/Desktop/project/yolact/labelout/'
-def get_images_from_video(video_name, time_F):
+def GetImgsFromVideo(video_name, time_F):
     video_images = []
     vc = cv2.VideoCapture(video_name)
     
@@ -24,18 +24,14 @@ def get_images_from_video(video_name, time_F):
     return video_images
 
 time_F = 1    #每過幾幀擷取一次
-video_name = 'video_0.avi' #影片名稱
-video_images = get_images_from_video(video_name, time_F) #讀取影片並轉成圖片
+video_name = "video_0.avi" #影片名稱
+video_images = GetImgsFromVideo(video_name, time_F) #讀取影片並轉成圖片
 
-for i in range(0, len(video_images)): #擷取圖片並存取
-    cv2.imshow('windows', video_images[i])
+for i in range(0, len(video_images) - 1): #擷取圖片並存取
+    cv2.imshow("windows", video_images[i])
     cv2.waitKey(100)
-    file_name = '{}{:08d}.jpg'.format(output_folder,i)
+    file_name = "{}{:08d}.jpg".format(OUT_PATH, i)
+    print(file_name)
     cv2.imwrite(file_name, video_images[i])
 
-    
-#img=cv2.imread('images_'+str(i)+'_張',0)
-print(i+1,'張')
-#cv2.imwrite(video_images,video_images[i])    
-
-cv2.destroyAllWindows
+cv2.destroyAllWindows()
