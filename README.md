@@ -17,9 +17,17 @@
 - coco --由labelme2coco轉好的Dataset存入(比較資料&訓練資料)
 
 
-# <a href="https://drive.google.com/drive/folders/107iCjjIPpSYx6bPH5vZTlXO3et1qNNrS?usp=sharing" title="test_data"> test_data</a>
+# [test_data](https://drive.google.com/drive/folders/107iCjjIPpSYx6bPH5vZTlXO3et1qNNrS?usp=sharing)
 - video_0 videocut.py擷取圖片
 - coco放入 .yolact/data/
 - evalinput放入 .yolact/
 - labelout放入 .yolact/
 - weights放入 .yolact/
+
+# UPDATE LOG
+### [integrate-v1](https://github.com/XBensonX/zhujian_jiance/tree/integrate-v1)
+- 將 video.py、videocut.py、yolact/eval.py 串接一條龍，並整理 code
+  - Main.py為主程式
+  - VideoOperation.py 為跟影片處理相關的 Class，目前是將錄影跟逐幀切割放在裡面
+  - yolact/eval.py 使用是用 cmd 呼叫的方式
+- 舊的程式碼（video.py、videocut.py）皆放在 old/ 中
