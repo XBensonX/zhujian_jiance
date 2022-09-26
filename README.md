@@ -31,3 +31,9 @@
   - VideoOperation.py 為跟影片處理相關的 Class，目前是將錄影跟逐幀切割放在裡面
   - yolact/eval.py 使用是用 cmd 呼叫的方式
 - 舊的程式碼（video.py、videocut.py）皆放在 old/ 中
+
+### [main0926]
+- 新增takepicture.py --擷取圖片
+- video.py --新增 cv2.flip 翻轉影像
+- 將 video.py、videocut.py、picturesetting.py、takepicture.py整合至videoControl資料夾
+- 新增ArduinoControl.ino、NXArduino.py並整合至ArduinoControl資料夾
