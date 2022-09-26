@@ -15,10 +15,11 @@ fourcc = cv2.VideoWriter_fourcc(*'XVID')
 FPS = 30  #擷取影片頻率
 
 write_flag = 0  #判斷是否為寫入模式
-video_counter = 0  #計數儲存影片數量ss
+video_counter = 0  #計數儲存影片數量
 
 while(cap.isOpened()):
     ret, frame = cap.read()
+    frame=cv2.flip(frame,0)
     if ret == True:
         if cv2.waitKey(10) & 0xFF == ord('r') and write_flag == 0: # 寫入影格
             write_flag = 1
@@ -37,7 +38,7 @@ while(cap.isOpened()):
 
         if (write_flag == 1):
             out.write(frame)
-            
+
         cv2.imshow('frame',frame)
     else:
         break
